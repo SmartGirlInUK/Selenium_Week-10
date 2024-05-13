@@ -21,11 +21,5 @@ public class BaseTest {
         WebElement element = driver.findElement(by);
         element.click();
     }
-
-    public void sendTextToElement(By by, String text) {
-        WebElement element=driver.findElement(by);
-        element.sendKeys(text);
-    }
-
 }
 
