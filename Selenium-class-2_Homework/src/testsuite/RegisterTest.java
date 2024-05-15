@@ -30,15 +30,31 @@ public class RegisterTest extends BaseTest {
         clickOnElement(By.xpath("//select[@name='DateOfBirthDay']//option[@value='30']"));
         clickOnElement(By.xpath("//select[@name='DateOfBirthMonth']//option[@value='8']"));
         clickOnElement(By.xpath("//select[@name='DateOfBirthYear']//option[@value='1999']"));
-        driver.findElement(By.id("Email")).sendKeys("admin123456@gmail.com");
+        driver.findElement(By.id("Email")).sendKeys("abcadmin@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("AdminABC");
         driver.findElement(By.name("ConfirmPassword")).sendKeys("AdminABC");
         clickOnElement(By.id("register-button"));
         String msg = driver.findElement(By.className("result")).getText();
         Assert.assertEquals("Registration Validation", "Your registration completed", msg);
     }
+    @Test
+    public void registerWithExistEmailID() {
+        clickOnElement(By.className("ico-register"));
+        clickOnElement(By.id("gender-male"));
+        driver.findElement(By.id("FirstName")).sendKeys("Xyz");
+        driver.findElement(By.name("LastName")).sendKeys("ABC");
+        clickOnElement(By.xpath("//select[@name='DateOfBirthDay']//option[@value='23']"));
+        clickOnElement(By.xpath("//select[@name='DateOfBirthMonth']//option[@value='6']"));
+        clickOnElement(By.xpath("//select[@name='DateOfBirthYear']//option[@value='1986']"));
+        driver.findElement(By.id("Email")).sendKeys("admin@gmail.com");
+        driver.findElement(By.id("Password")).sendKeys("xyz123");
+        driver.findElement(By.name("ConfirmPassword")).sendKeys("xyz123");
+        clickOnElement(By.id("register-button"));
+        String msg = driver.findElement(By.xpath("//div[@class='message-error validation-summary-errors']/ul/li")).getText();
+        Assert.assertEquals("User Already Exist", "The specified email already exists", msg);
+    }
     @After
     public void tearDown() {
-        closeBrowser();
+        //closeBrowser();
     }
 }
