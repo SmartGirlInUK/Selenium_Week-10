@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Selenium-class-2_Homework/Selenium-class-2_Homework.iml" filepath="$PROJECT_DIR$/Selenium-class-2_Homework/Selenium-class-2_Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Selenium_Week-10.iml" filepath="$PROJECT_DIR$/.idea/Selenium_Week-10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-herokuapp-sw-2/com-herokuapp-sw-2.iml" filepath="$PROJECT_DIR$/com-herokuapp-sw-2/com-herokuapp-sw-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-orangehrmlive-sw-2/com-orangehrmlive-sw-2.iml" filepath="$PROJECT_DIR$/com-orangehrmlive-sw-2/com-orangehrmlive-sw-2.iml" />
+    </modules>
+  </component>
+</project>
