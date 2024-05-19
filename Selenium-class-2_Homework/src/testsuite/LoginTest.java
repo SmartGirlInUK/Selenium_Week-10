@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginWithValidCredentials(){
         clickOnElement(By.className("ico-login"));
-        driver.findElement(By.name("Email")).sendKeys("abcadmin@gmail.com");
+        driver.findElement(By.name("Email")).sendKeys("admin@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("AdminABC");
         clickOnElement(By.xpath("//button[@class='button-1 login-button']"));
         String msg=driver.findElement(By.className("ico-logout")).getText();

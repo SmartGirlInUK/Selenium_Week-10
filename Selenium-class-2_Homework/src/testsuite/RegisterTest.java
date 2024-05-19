@@ -30,7 +30,7 @@ public class RegisterTest extends BaseTest {
         clickOnElement(By.xpath("//select[@name='DateOfBirthDay']//option[@value='30']"));
         clickOnElement(By.xpath("//select[@name='DateOfBirthMonth']//option[@value='8']"));
         clickOnElement(By.xpath("//select[@name='DateOfBirthYear']//option[@value='1999']"));
-        driver.findElement(By.id("Email")).sendKeys("abcadmin@gmail.com");
+        driver.findElement(By.id("Email")).sendKeys("admin123@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("AdminABC");
         driver.findElement(By.name("ConfirmPassword")).sendKeys("AdminABC");
         clickOnElement(By.id("register-button"));
@@ -55,6 +55,6 @@ public class RegisterTest extends BaseTest {
     }
     @After
     public void tearDown() {
-        //closeBrowser();
+        closeBrowser();
     }
 }
